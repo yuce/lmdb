@@ -675,13 +675,13 @@ static void lmdb_unload(ErlNifEnv* env, void* priv_data)
 }
 
 static ErlNifFunc nif_funcs [] = {
-    {"open",        4, lmdb_open},
-    {"close",       2, lmdb_close},
-    {"put",         4, lmdb_put},
-    {"get",         3, lmdb_get},
-    {"del",         3, lmdb_del},
-    {"update",      4, lmdb_update},
-    {"drop",        2, lmdb_drop}
+    {"open",        4, lmdb_open, 0},
+    {"close",       2, lmdb_close, 0},
+    {"put",         4, lmdb_put, 0},
+    {"get",         3, lmdb_get, 0},
+    {"del",         3, lmdb_del, 0},
+    {"update",      4, lmdb_update, 0},
+    {"drop",        2, lmdb_drop, 0}
 };
 
 /* driver entry point */

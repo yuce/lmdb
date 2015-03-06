@@ -32,7 +32,7 @@
 %% EXPORTS
 %%====================================================================
 -export([
-         %open/1,
+         open/1,
          open/2,
          open/3,
 
@@ -80,8 +80,8 @@
 %% @doc Create a new MDB database
 %% @end
 %%--------------------------------------------------------------------
-%open(DirName) ->
-%    open(DirName, ?MDB_MAP_SIZE).
+open(DirName) ->
+   open(DirName, ?MDB_MAP_SIZE).
 open(DirName, MapSize)
   when is_integer(MapSize)
        andalso MapSize > 0 ->
